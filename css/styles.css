@@ -19,7 +19,8 @@ body {
     font-size: 16px;
     font-weight: 400;
     color: #0f0f12;
-    background: 800px url("/img/pizza-back.webp");
+    background-image: url("../img/pizza-background3.jpg");
+    background-size: cover;
 }
 
 .container {
@@ -30,7 +31,7 @@ body {
 .header {
     text-align: center;
     margin: 15px 0 10px 0;
-    text-shadow: rgba(255, 255, 255, 1) 2px 1px 2px;
+    
 }
 
 .sub-header {
