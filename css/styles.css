@@ -73,6 +73,7 @@ textarea {
 
 select {
     padding: 3px;
+    margin-bottom: 5px;
     border: 1px solid #0f0f12;
     border-radius: 5px;
 }
@@ -176,3 +177,42 @@ input:checked+.slider:before {
 .btn:active {
     background-color: #f45151e3;
 }
+
+/* ERRORS */
+
+.form-control i, .form-control .error-hint{
+    display: none;
+}
+
+.form-control.error i.fa-circle-exclamation, .form-control.error .error-hint {
+    display: inline;
+    text-align: center;
+    color: #ee3c3cf2;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.form-control.no-error i.fa-circle-check {
+    display: inline;
+    text-align: center;
+    color: green;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+select.invalid {
+    border: 2px solid #ee3c3cf2;
+}
+
+input.invalid {
+    border: 2px solid #ee3c3cf2;
+}
+
+select.valid {
+    border: 2px solid green;
+}
+
+input.valid {
+    border: 2px solid green;
+}
+

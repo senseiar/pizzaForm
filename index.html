@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="./css/all.css">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/styles.css">
     <title>Order some pizza!</title>
@@ -16,60 +17,90 @@
 <body>
     <div class="container">
         <h1 class="header">Order some pizza!</h1>
-        <form action="#" class="pizza-form">
+        <form action="#" class="pizza-form" id="form">
             <div class="block">
-                <label for="pizzaSelect">Choose your pizza</label>
-                <select name="pizzas" id="pizzaSelect">
-                    <option value="">...</option>
-                    <option value="papperoni">Paperoni 🍕</option>
-                    <option value="margarita">Margarita 🍕</option>
-                    <option value="bbq">BBQ 🍕</option>
-                    <option value="carbonara">Carbonara 🍕</option>
-                </select>
-                <label for="drinkSelect">Choose a drink</label>
-                <select name="drinks" id="drinkSelect">
-                    <option value="">...</option>
-                    <option value="cola">Cola 🥤</option>
-                    <option value="sprite">Sprite 🥤</option>
-                    <option value="fanta">Fanta 🥤</option>
-                    <option value="beer">Beer 🍺</option>
-                </select>
+                <div class="form-control">
+                    <label for="pizzaSelect">Choose your pizza</label>
+                    <select name="pizzas" id="pizzaSelect" class="select">
+                        <option value="">...</option>
+                        <option value="papperoni">Paperoni 🍕</option>
+                        <option value="margarita">Margarita 🍕</option>
+                        <option value="bbq">BBQ 🍕</option>
+                        <option value="carbonara">Carbonara 🍕</option>
+                    </select>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa fa-light fa-circle-exclamation"></i>
+                    <span class="error-hint"></span>
+                </div>
+                <div class="form-control">
+                    <label for="drinkSelect">Choose a drink</label>
+                    <select name="drinks" id="drinkSelect">
+                        <option value="">...</option>
+                        <option value="cola">Cola 🥤</option>
+                        <option value="sprite">Sprite 🥤</option>
+                        <option value="fanta">Fanta 🥤</option>
+                        <option value="beer">Beer 🍺</option>
+                    </select>
+                </div>
             </div>
             <div class="block">
+
                 <h3 class="sub-header">Contacts</h3>
-                <input type="text" name="name" placeholder="Name...">
-                <input type="text" name="lastname" placeholder="Lastname...">
-                <input type="email" name="email" placeholder="Email...">
-                <input type="text" name="phone" placeholder="Phone...">
+                <div class="form-control">
+                    <input type="text" name="name" placeholder="Name..." id="firstName" class="first-name">
+                    <i class="fa fa-solid fa-circle-check"></i>
+                    <i class="fa fa-light fa-circle-exclamation"></i>
+                    <span class="error-hint"></span>
+                </div>
+                <div class="form-control">
+                    <input type="text" name="lastname" placeholder="Lastname...">
+                </div>
+                <div class="form-control">
+                    <input type="email" name="email" placeholder="Email...">
+                </div>
+                <div class="form-control">
+                    <input type="text" name="phone" placeholder="Phone...">
+                </div>
             </div>
             <div class="block">
                 <h3 class="sub-header">Address</h3>
-                <input type="text" name="street" placeholder="Street...">
-                <input type="text" name="housenum" placeholder="House number...">
-                <input type="text" name="flatnum" placeholder="Flat number...">
+                <div class="form-control">
+                    <input type="text" name="street" placeholder="Street...">
+                </div>
+                <div class="form-control">
+                    <input type="text" name="housenum" placeholder="House number...">
+                </div>
+                <div class="form-control">
+                    <input type="text" name="flatnum" placeholder="Flat number...">
+                </div>
                 <textarea name="comment" class="comment" placeholder="Comment..."></textarea>
             </div>
             <div class="payment">
-                <label for="paymentMethod">Payment Method</label>
-                <select name="method" id="paymentMethod">
-                    <option value="cash">Cash 💵</option>
-                    <!-- <option value="cardonline">Card online</option> -->
-                    <option value="cardtodriver">Card to driver 💳</option>
-                </select>
-                <label for="change">Change</label>
-                <input type="text" id="change" placeholder="...">
-                <div class="wchange">
-                    <span class="text">Without change:</span>
-                    <label class="switch">
-                        <input type="checkbox" id="withoutChange" name="withoutchange" value="withoutchange">
-                        <span class="slider round"></span>
-                    </label>
-                </div>   
-            </div>
-            <button class="btn">Submit</button>
+                <div class="form-control">
+                    <label for="paymentMethod">Payment Method</label>
+                    <select name="method" id="paymentMethod">
+                        <option value="">...</option>
+                        <option value="cash">Cash 💵</option>
+                        <!-- <option value="cardonline">Card online</option> -->
+                        <option value="cardtodriver">Card to driver 💳</option>
+                    </select>
+                </div>
+                <div class="block">
+                    <div class="form-control">
+                        <label for="change">Change</label>
+                        <input type="text" id="change" placeholder="...">
+                    </div>
+                    <div class="wchange">
+                        <span class="text">Without change:</span>
+                        <label class="switch">
+                            <input type="checkbox" id="withoutChange" name="withoutchange" value="withoutchange">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+                <button class="btn">Submit</button>
         </form>
     </div>
-
     <script src="./js/scripts.js"></script>
 </body>
 
