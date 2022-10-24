@@ -53,25 +53,43 @@
                     <span class="error-hint"></span>
                 </div>
                 <div class="form-control">
-                    <input type="text" name="lastname" placeholder="Lastname...">
+                    <input type="text" name="lastname" placeholder="Lastname..." id="lastName">
+                    <i class="fa fa-solid fa-circle-check"></i>
+                    <i class="fa fa-light fa-circle-exclamation"></i>
+                    <span class="error-hint"></span>
                 </div>
                 <div class="form-control">
-                    <input type="email" name="email" placeholder="Email...">
+                    <input type="text" name="email" placeholder="Email..." id="email">
+                    <i class="fa fa-solid fa-circle-check"></i>
+                    <i class="fa fa-light fa-circle-exclamation"></i>
+                    <span class="error-hint"></span>
                 </div>
                 <div class="form-control">
-                    <input type="text" name="phone" placeholder="Phone...">
+                    <input type="text" name="phone" placeholder="Phone..." id="phone">
+                    <i class="fa fa-solid fa-circle-check"></i>
+                    <i class="fa fa-light fa-circle-exclamation"></i>
+                    <span class="error-hint"></span>
                 </div>
             </div>
             <div class="block">
                 <h3 class="sub-header">Address</h3>
                 <div class="form-control">
-                    <input type="text" name="street" placeholder="Street...">
+                    <input type="text" name="street" placeholder="Street..." id="street">
+                    <i class="fa fa-solid fa-circle-check"></i>
+                    <i class="fa fa-light fa-circle-exclamation"></i>
+                    <span class="error-hint"></span>
                 </div>
                 <div class="form-control">
-                    <input type="text" name="housenum" placeholder="House number...">
+                    <input type="number" name="housenum" placeholder="House number..." id="houseNum">
+                    <i class="fa fa-solid fa-circle-check"></i>
+                    <i class="fa fa-light fa-circle-exclamation"></i>
+                    <span class="error-hint"></span>
                 </div>
                 <div class="form-control">
-                    <input type="text" name="flatnum" placeholder="Flat number...">
+                    <input type="number" name="flatnum" placeholder="Flat number..." id="flatNum">
+                    <i class="fa fa-solid fa-circle-check"></i>
+                    <i class="fa fa-light fa-circle-exclamation"></i>
+                    <span class="error-hint"></span>
                 </div>
                 <textarea name="comment" class="comment" placeholder="Comment..."></textarea>
             </div>
@@ -84,11 +102,17 @@
                         <!-- <option value="cardonline">Card online</option> -->
                         <option value="cardtodriver">Card to driver 💳</option>
                     </select>
+                    <i class="fa fa-solid fa-circle-check"></i>
+                    <i class="fa fa-light fa-circle-exclamation"></i>
+                    <span class="error-hint"></span>
                 </div>
                 <div class="block">
                     <div class="form-control">
                         <label for="change">Change</label>
-                        <input type="text" id="change" placeholder="...">
+                        <input type="number" id="change" placeholder="...">
+                        <i class="fa fa-solid fa-circle-check"></i>
+                        <i class="fa fa-light fa-circle-exclamation"></i>
+                        <span class="error-hint"></span>
                     </div>
                     <div class="wchange">
                         <span class="text">Without change:</span>
@@ -101,6 +125,7 @@
                 <button class="btn">Submit</button>
         </form>
     </div>
+    <script src="https://unpkg.com/imask"></script>
     <script src="./js/scripts.js"></script>
 </body>
 
