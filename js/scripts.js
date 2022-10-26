@@ -9,12 +9,16 @@ const houseNum = document.getElementById('houseNum');
 const flatNum = document.getElementById('flatNum');
 const paymentMethod = document.getElementById('paymentMethod');
 const change = document.getElementById('change');
+const successMsg = document.querySelector('.success-wrapper');
 
 let maskOptions = {
     mask: '+{38}(000)000-00-00',
 };
 
 let mask = IMask(phone, maskOptions); 
+let isValidForm = true;
+let inputs = [form, pizza, firstName, lastName, email, phone, street,
+    houseNum, flatNum, paymentMethod, change];
 
 function validate() {
     const pizzaVal = pizza.value.trim();
@@ -88,15 +92,29 @@ function validate() {
         setValidFor(change);
     }
 
+    inputs.forEach(input => {
+        if (input.className == 'invalid') {
+            isValidForm = false;
+            console.log(isValidForm);
+        }
+        else {
+            isValidForm = true;
+        }
+        
+    })
 }
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-
     validate();
+    if (isValidForm) {
+        console.log('send data');
+        form.style.display = "none";
+        successMsg.style.display = "flex";
+    }
+    
+        
 });
-
-
 
 function setErrorFor(input, message) {
     const formControl = input.parentElement;
@@ -131,4 +149,4 @@ function checkEmail(em) {
 
 function checkPhone(str) {
     return /^\+\d{2}\(\d{3}\)\d{3}-\d{2}-\d{2}/.test(str);
-} 
+}

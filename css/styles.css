@@ -23,15 +23,39 @@ body {
     background-size: cover;
 }
 
-.container {
+.success-wrapper {
+    display: none;
     margin: 0 auto;
+    width: 500px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+.success-msg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.form-container {
+    margin: auto;
     max-width: 500px;
+    margin-top: 20px;
 }
 
 .header {
+
     text-align: center;
     margin: 15px 0 10px 0;
-    
+
 }
 
 .sub-header {
@@ -39,7 +63,8 @@ body {
 }
 
 form {
-    padding: 25px;
+    /* display: none; */
+    padding: 10px 25px 25px 25px;
     border-radius: 10px;
     background-color: #FAF9F6;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -178,13 +203,17 @@ input:checked+.slider:before {
     background-color: #f45151e3;
 }
 
+
+
 /* ERRORS */
 
-.form-control i, .form-control .error-hint{
+.form-control i,
+.form-control .error-hint {
     display: none;
 }
 
-.form-control.error i.fa-circle-exclamation, .form-control.error .error-hint {
+.form-control.error i.fa-circle-exclamation,
+.form-control.error .error-hint {
     display: inline;
     text-align: center;
     color: #ee3c3cf2;
@@ -215,4 +244,3 @@ select.valid {
 input.valid {
     border: 2px solid green;
 }
-
